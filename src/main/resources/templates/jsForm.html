@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Form</title>
+</head>
+<body>
+<h1>Ejemplo de validación de campos con función JavaScript</h1>
+<form name="form" action="/finish" onsubmit="return validateForm()" method="post">
+  Nombre: <input type="text" name="att1">
+  Apellido: <input type="text" name="att2">
+  Carrera que estás cursando: <input type="text" name="att3">
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+
+<script>
+function validateForm() {
+  let x = document.forms["form"]["att1"].value;
+  let y = document.forms["form"]["att2"].value;
+  let z = document.forms["form"]["att3"].value;
+  if (x == "" ) {
+    alert("Nombre debe estar completo");
+    return false;
+  } else if (y == "") {
+	    alert("Apellido debe estar completo");
+	    return false;
+  } else if (z == "") {
+	    alert("Nombre de Carrera debe estar completo");
+	    return false;
+  }
+}
+</script>
+
+</html>
